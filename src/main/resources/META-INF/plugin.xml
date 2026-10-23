@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.akurupela.sta</id>
+    <name>Source Tree Advance</name>
+    <vendor>Example</vendor>
+
+    <description><![CDATA[
+      A SourceTree-style Git client inside any JetBrains IDE, for any project: no separate Git app needed.
+      <br><br>
+      <b>History</b>: commit graph (local, all or current branch) with branch / tag labels, search, author filter,
+      changed files and the IDE diff. <b>File status</b>: stage / unstage files or single hunks, discard, commit or
+      amend and optionally push. <b>Pull</b>, <b>Push</b>, <b>Fetch</b>, branches, tags and stashes; every command
+      that changes the repo is written to Logs.
+      <br><br>
+      <b>Any project layout</b>: opens the project's repository from any subfolder, or the first one in its content
+      roots or subfolders.
+      <br>
+      <b>Look</b>: flat Metro style in greens, light or dark with the IDE's theme. Diffs open in a large window with Expand.
+      <br>
+      <b>Sign-in</b>: when a remote refuses, asks how to sign in and tries again: access token, username and password,
+      Bearer token, SSH key with passphrase, SSH password, or trusting a new SSH host key. Sign-ins are kept in the
+      IDE password safe; Git's own credential helpers still work first.
+      <br>
+      <b>Commit options</b>: author, sign-off, GPG / SSH signature, Git hooks on or off; reformat, rearrange and
+      optimize imports before committing; code analysis, new TODOs and a run configuration before or after it.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <!-- commit options: code actions and TODO patterns (lang), code analysis before commit (vcs) -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.vcs</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Source Tree Advance"
+                    anchor="bottom"
+                    factoryClass="com.akurupela.sta.ui.SourceTreeAdvanceToolWindowFactory"
+                    icon="/icons/sourceTreeAdvance.svg"/>
+    </extensions>
+</idea-plugin>
