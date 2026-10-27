@@ -1,9 +1,8 @@
-# Source Tree Advance — public incomplete source
+# Source Tree Advance
 
-This folder is a **public share scaffold** only.
+A Git client inside JetBrains IDEs. Manage history, branches, tags, stashes, and remotes without leaving the IDE.
 
-It shows the plugin structure, models, settings and extension points.
-**Core logic is intentionally incomplete**: it compiles, but it is not a working Git client.
+Public source code snapshot.
 
 ## Plugin
 - **Name:** Source Tree Advance

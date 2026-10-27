@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.platform.vcs.impl" revision="AI-262.9437.185.2621.16467767" />
+  <configurations>
+    <conf name="default" visibility="public" />
+  </configurations>
+  <publications>
+    <artifact name="intellij.platform.vcs.impl" ext="jar" conf="default" url="lib" />
+  </publications>
+  <dependencies />
+</ivy-module>

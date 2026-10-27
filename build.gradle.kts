@@ -20,8 +20,8 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        val localIde = providers.gradleProperty("localIde").orNull
-        if (localIde != null) local(localIde) else intellijIdea(providers.gradleProperty("platformVersion").get())
+        val localIde = providers.gradleProperty("localIde").orNull ?: "/Applications/Android Studio.app"
+        local(localIde)
         // CodeSmellDetector (Analyze code before commit)
         bundledModule("intellij.platform.vcs.impl")
     }
